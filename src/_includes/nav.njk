@@ -1,0 +1,36 @@
+<nav>
+
+  {% set navPages = collections.all | eleventyNavigation %}
+  <ul class="nav">
+  {%- for entry in navPages %}
+    <li class="nav__button{% if entry.url == page.url %} nav__button--active{% endif %}">
+      <a href="{{ entry.url | url }}">{{ entry.title }}</a>
+    </li>
+  {%- endfor %}
+  </ul>
+
+</nav>
+
+
+{# <nav id="nav">
+  <ul class="nav nav--desktop">
+    <li class="nav__button ">
+      <a href="/">Die Stiftung</a>
+    </li>
+    <li class="nav__button ">
+      <a href="/posts">Aktuelles</a>
+    </li>
+    <li class="nav__button">
+      <a href="projekte.htm">Projekt</a>
+    </li>
+    <li class="nav__button">
+      <a href="spenden.htm">Spenden</a>
+    </li>
+    <li class="nav__button">
+      <a href="satzung.htm">Satzung</a>
+    </li>
+    <li class="nav__button nav__button--active">
+      <a href="kontakte.htm">Kontakt</a>
+    </li>
+  </ul>
+</nav> #}

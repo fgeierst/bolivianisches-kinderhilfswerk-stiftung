@@ -1,0 +1,22 @@
+<header class="header">
+
+	<a href="/">
+		<img class="header__logo" src="/assets/bolivienstiftung_logo.svg" alt="">
+	</a>
+
+
+	{% if eleventyNavigation.key === "Stiftung" %}
+		<h1 class="header__title">
+			Gemeinschaftsstiftung Bolivianisches Kinderhilfswerk
+		</h1>
+	{% else %}
+		<div class="header__title">
+			Gemeinschaftsstiftung Bolivianisches Kinderhilfswerk
+		</div>
+	{% endif %}
+
+
+
+</header>
+
+{% include 'nav.njk' %}
