@@ -41,15 +41,17 @@ eleventyNavigation:
 
           </section>
 
-          <style>
+          {# <style>
             .img--responsive-link {
                grid-column: 1 / span 2;
             }
-          </style>
+          </style> #}
 
-          <a class="img--responsive-link" href="/assets/photos/200901_comedor.jpg">
+          {# <a class="img--responsive-link" href="/assets/photos/200901_comedor.jpg">
             <img class="img--responsive" src="/assets/photos/200901_comedor-400.jpg" alt="Krippenkinder sitzen an einem langen Tisch beim Essen">
-          </a>
+          </a> #}
+
+          {% image "./src/assets/photos/200901_comedor.jpg", "Krippenkinder sitzen an einem langen Tisch beim Essen", "(min-width: 30em) 50vw, 100vw" %}
 
           <section>
             <h3>Bolivien</h3>
