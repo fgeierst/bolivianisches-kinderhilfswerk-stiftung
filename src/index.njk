@@ -13,7 +13,7 @@ eleventyNavigation:
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Gemeinschaftsstiftung Bolivianisches Kinderhilfswerk</title>
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" sizes="any">
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" sizes="any">
     <meta name="description" content="Die Gemeinschaftsstiftung Bolivianisches Kinderhilfswerk ist in Bolivien für Kinder und Jugendliche tätig, um deren Lebensbedingungen und Zukunft zu verbessern. Sie soll die Arbeit des Vereins Bolivianisches Kinderhilfswerk e.V. langfristig finanziell begleiten und absichern.">
     <link rel="stylesheet" href="/assets/style.css">
     <link rel="preconnect" href="http://fonts.googleapis.com">
@@ -23,7 +23,7 @@ eleventyNavigation:
   <body>
     <div class="container">
 
-{% include 'header.njk' %}
+      {% include 'header.njk' %}
 
       <main>
 
@@ -31,25 +31,23 @@ eleventyNavigation:
 
           <section>
 
-            <h2 class="page__title"> Die Stiftung</h2>
+            <h2 class="page__title">
+              Die Stiftung</h2>
 
-            <p>Die <i>Gemeinschaftsstiftung Bolivianisches Kinderhilfswerk</i> soll die Arbeit des Vereins <i>Bolivianisches Kinderhilfswerk e.V.</i> langfristig, auch für künftige Generationen, finanziell begleiten und absichern.</p>
+            <p>Die
+              <i>Gemeinschaftsstiftung Bolivianisches Kinderhilfswerk</i>
+              soll die Arbeit des Vereins
+              <i>Bolivianisches Kinderhilfswerk e.V.</i>
+              langfristig, auch für künftige Generationen, finanziell begleiten und absichern.</p>
 
-            <p>Das <i>Bolivianische Kinderhilfswerk e.V.</i> ist in Bolivien für Kinder und Jugendliche tätig, um deren Lebensbedingungen und Zukunft zu verbessern. Es fördert Einrichtungen und Maßnahmen für diesen Personenkreis und trägt durch die Entsendung von Freiwilligen in die Projekte zur Völkerverständigung bei. </p>
+            <p>Das
+              <i>Bolivianische Kinderhilfswerk e.V.</i>
+              ist in Bolivien für Kinder und Jugendliche tätig, um deren Lebensbedingungen und Zukunft zu verbessern. Es fördert Einrichtungen und Maßnahmen für diesen Personenkreis und trägt durch die Entsendung von Freiwilligen in die Projekte zur Völkerverständigung bei.
+            </p>
 
             <p>Die Stiftung konnte nur entstehen, da es einen Menschen gab, der über sein Leben hinaus seine Unterstützung unseren Aufgaben zukommen lassen wollte. Ohne Anspruch auf die Nennung seines Namens vermachte er uns einen Teil seines Nachlasses. Die Erträge bilden die Grundlage der Stiftung und geben damit auch anderen Menschen die Möglichkeiten für Zustiftungen.</p>
 
           </section>
-
-          {# <style>
-            .img--responsive-link {
-               grid-column: 1 / span 2;
-            }
-          </style> #}
-
-          {# <a class="img--responsive-link" href="/assets/photos/200901_comedor.jpg">
-            <img class="img--responsive" src="/assets/photos/200901_comedor-400.jpg" alt="Krippenkinder sitzen an einem langen Tisch beim Essen">
-          </a> #}
 
           {% image "./src/assets/photos/200901_comedor.jpg", "Krippenkinder sitzen an einem langen Tisch beim Essen", "(min-width: 30em) 50vw, 100vw" %}
 
@@ -64,26 +62,29 @@ eleventyNavigation:
 
       </main>
 
-      <footer>
-      © 2002&thinsp;&ndash;&thinsp;2020, Stand vom <time datetime="2019-11-21">11.04.2020</time>
-      </footer>
+      {% set modified = "11.04.2020" %}
+      {% include 'footer.njk' %}
 
     </div>
     <!-- /container -->
 
-
-<script type="text/javascript">
-  WebFontConfig = {
-    google: { families: [ 'Nunito|Alegreya:800' ] }
-  };
-  (function() {
-    var wf = document.createElement('script');
-    wf.src = 'https://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
-    wf.type = 'text/javascript';
-    wf.async = 'true';
-    var s = document.getElementsByTagName('script')[0];
-    s.parentNode.insertBefore(wf, s);
-  })(); </script>
+    <script type="text/javascript">
+      WebFontConfig = {
+        google: {
+          families: ['Nunito|Alegreya:800']
+        }
+      };
+      (function () {
+        var wf = document.createElement('script');
+        wf.src = 'https://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+        wf.type = 'text/javascript';
+        wf.async = 'true';
+        var s = document.getElementsByTagName('script')[0];
+        s
+          .parentNode
+          .insertBefore(wf, s);
+      })();
+    </script>
 
   </body>
 

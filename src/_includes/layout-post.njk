@@ -6,44 +6,45 @@ eleventyNavigation:
 <!DOCTYPE html>
 <html lang="de">
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>{{ title }} -  Gemeinschaftsstiftung Bolivianisches Kinderhilfswerk</title>
-        <link rel="icon" type="image/svg+xml" href="/favicon.svg" sizes="any">
-        <link rel="stylesheet" href="/assets/style.css">
-        <link href="https://fonts.googleapis.com/css?family=Nunito|Alegreya:800&display=swap"
-        rel="stylesheet">
-    </head>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }}
+      - Gemeinschaftsstiftung Bolivianisches Kinderhilfswerk</title>
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" sizes="any">
+    <link rel="stylesheet" href="/assets/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Nunito|Alegreya:800&display=swap" rel="stylesheet">
+  </head>
 
-    <body>
+  <body>
 
-        <div class="container">
+    <div class="container">
 
-            {% include 'header.njk' %}
+      {% include 'header.njk' %}
 
-            <main class="main">
+      <main class="main">
 
-                <article>
+        <article>
 
-                    <section>
-                        <h1 class="page__title">
-                            {{ title }}
-                        </h1>
-                        <p class="post__metadata">Von {{ author }}</p>
-                    </section>
+          <section>
+            <h1 class="page__title">
+              {{ title }}
+            </h1>
+            <p class="post__metadata">Von
+              {{ author }}</p>
+          </section>
 
-                    {{ content | safe }}
+          {{ content | safe }}
 
-                </article>
+        </article>
 
-            </main>
-            <footer>
-                  © 2002&thinsp;&ndash;&thinsp;2021, Eintrag vom <time datetime="{{  page.date }}">
-                    {{  page.date.toLocaleDateString("de",{year:"numeric",month:"2-digit", day:"numeric"}) }}</time>
-            </footer>
-        </div>
+      </main>
 
-    </body>
+      {% set modified = page.date.toLocaleDateString("de",{year:"numeric",month:"2-digit", day:"numeric"}) %}
+      {% include 'footer.njk' %}
+
+    </div>
+
+  </body>
 
 </html>

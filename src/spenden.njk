@@ -10,15 +10,12 @@ eleventyNavigation:
 
   <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-        content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible"
-        content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Spenden - Gemeinschaftsstiftung Bolivianisches Kinderhilfswerk</title>
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" sizes="any">
     <link rel="stylesheet" href="/assets/style.css">
-    <link href="https://fonts.googleapis.com/css?family=Nunito|Alegreya:800&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nunito|Alegreya:800&display=swap" rel="stylesheet">
   </head>
 
   <body>
@@ -49,14 +46,17 @@ eleventyNavigation:
               </tr>
               <tr>
                 <td>Verwendungszweck:</td>
-                <td>Bitte geben Sie das Stichwort <em>SPENDE</em> sowie Ihre vollständige Adresse auf dem Überweisungsträger an, damit wir Ihnen eine Zuwendungsbestätigung ausstellen können.</td>
+                <td>Bitte geben Sie das Stichwort
+                  <em>SPENDE</em>
+                  sowie Ihre vollständige Adresse auf dem Überweisungsträger an, damit wir Ihnen eine Zuwendungsbestätigung ausstellen können.</td>
               </tr>
             </table>
 
           </section>
 
           <section>
-            <h3>Zustiftungen </h3>
+            <h3>Zustiftungen
+            </h3>
 
             <table>
               <tr>
@@ -73,28 +73,29 @@ eleventyNavigation:
               </tr>
               <tr>
                 <td>Verwendungszweck:</td>
-                <td>Bitte geben Sie das Stichwort <em>ZUSTIFTUNG</em> sowie Ihre vollständige Adresse auf dem Überweisungsträger an, damit wir Ihnen eine Zuwendungsbestätigung ausstellen können.</td>
+                <td>Bitte geben Sie das Stichwort
+                  <em>ZUSTIFTUNG</em>
+                  sowie Ihre vollständige Adresse auf dem Überweisungsträger an, damit wir Ihnen eine Zuwendungsbestätigung ausstellen können.</td>
               </tr>
             </table>
 
           </section>
 
-          <img class="img--responsive"
-             src="/assets/photos/201811_casa.jpg">
+          <img class="img--responsive" src="/assets/photos/201811_casa.jpg">
 
           <section>
             <h3>Warum stiften?</h3>
 
             <p>Um die Projektarbeiten dauerhaft und nachhaltig zu sichern bedarf es konstanter Unterstützung. Stiftungen garantieren eine langfristige und sichere Finanzierung von Projekten aus den Erlösen des Stiftungsvermögens.</p>
-            <p> Wir wollen mit unserer Stiftung allen sozial engagierten Menschen eine Heimat geben, die ganz konkret Kindern und Jugendlichen in Bolivien helfen und damit Gutes tun wollen.</p>
+            <p>
+              Wir wollen mit unserer Stiftung allen sozial engagierten Menschen eine Heimat geben, die ganz konkret Kindern und Jugendlichen in Bolivien helfen und damit Gutes tun wollen.</p>
             <p>Stiftungen sind gleich in doppelter Hinsicht ein konstitutives Element der Gesellschaft. Zum einen ist Stiften selbst eine Ausdrucksform aktiven Engagements. Wenn Menschen privates Vermögen dauerhaft für gemeinnützige Zwecke zur Verfügung stellen, übernehmen sie Mitverantwortung für die gesellschaftliche Entwicklung. Zum anderen gehören Stiftungen zu den größten Förderern bürgerschaftlichen Engagements.</p>
 
           </section>
         </main>
 
-        <footer>
-      © 2002&thinsp;&ndash;&thinsp;2019, Stand vom <time datetime="2018-12-01">1.12.2018</time>
-        </footer>
+        {% set modified = "1.12.2018" %}
+        {% include 'footer.njk' %}
 
       </div>
       <!-- /container -->

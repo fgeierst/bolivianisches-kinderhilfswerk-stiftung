@@ -7,67 +7,72 @@ eleventyNavigation:
 <!DOCTYPE html>
 <html lang="de">
 
-      <head>
-            <meta charset="UTF-8">
-            <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <meta http-equiv="X-UA-Compatible" content="ie=edge">
-            <title>Blog - Gemeinschaftsstiftung Bolivianisches Kinderhilfswerk</title>
-            <link rel="icon" type="image/svg+xml" href="/favicon.svg" sizes="any">
-            <link rel="stylesheet" href="/assets/style.css">
-            <link rel="preconnect" href="http://fonts.googleapis.com">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Blog - Gemeinschaftsstiftung Bolivianisches Kinderhilfswerk</title>
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" sizes="any">
+    <link rel="stylesheet" href="/assets/style.css">
+    <link rel="preconnect" href="http://fonts.googleapis.com">
     <link rel="preconnect" href="http://fonts.gstatic.com">
-      </head>
+  </head>
 
-      <body>
-            <div class="container">
+  <body>
+    <div class="container">
 
-                  {% include 'header.njk' %}
+      {% include 'header.njk' %}
 
-                  <main class="posts">
-                    <article>
+      <main class="posts">
+        <article>
 
-                        <section>
+          <section>
 
-                            <h1 class="page__title">Blog</h1>
+            <h1 class="page__title">Blog</h1>
 
-                            {%- for post in collections.post | reverse -%}
-                                <article class="post">
-                                        <h2 class="post__title">
-                                            <a href="{{ post.url }}">{{ post.data.title }}</a>
-                                        </h2>
-                                        <p class="post__metadata">Von {{ post.data.author }}, {{  post.date.toLocaleDateString("de",{year:"numeric",month:"2-digit", day:"numeric"}) }}</p>
-                                        <p>{{ post.data.page.excerpt | safe }}</p>
-                                        <p>
-                                            <a href="{{ post.url }}">Weiterlesen...</a>
-                                        </p>
-                                </article>
-                            {%- endfor -%}
-                        </section>
-                    </article>
+            {%- for post in collections.post | reverse -%}
+              <article class="post">
+                <h2 class="post__title">
+                  <a href="{{ post.url }}">{{ post.data.title }}</a>
+                </h2>
+                <p class="post__metadata">Von
+                  {{ post.data.author }},
+                  {{  post.date.toLocaleDateString("de",{year:"numeric",month:"2-digit", day:"numeric"}) }}</p>
+                <p>{{ post.data.page.excerpt | safe }}</p>
+                <p>
+                  <a href="{{ post.url }}">Weiterlesen...</a>
+                </p>
+              </article>
+            {%- endfor -%}
+          </section>
+        </article>
 
+      </main>
 
-                  </main>
+      {% set modified = "22.7.2020" %}
+      {% include 'footer.njk' %}
 
-                  <footer>
-                  © 2002&thinsp;&ndash;&thinsp;2020, Stand vom <time datetime="2020-07-22">22.7.2020</time>
-                  </footer>
+    </div>
+    <!-- /container -->
 
-            </div>
-            <!-- /container -->
+    <script type="text/javascript">
+      WebFontConfig = {
+        google: {
+          families: ['Nunito|Alegreya:800']
+        }
+      };
+      (function () {
+        var wf = document.createElement('script');
+        wf.src = 'https://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+        wf.type = 'text/javascript';
+        wf.async = 'true';
+        var s = document.getElementsByTagName('script')[0];
+        s
+          .parentNode
+          .insertBefore(wf, s);
+      })();
+    </script>
 
-<script type="text/javascript">
-  WebFontConfig = {
-    google: { families: [ 'Nunito|Alegreya:800' ] }
-  };
-  (function() {
-    var wf = document.createElement('script');
-    wf.src = 'https://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
-    wf.type = 'text/javascript';
-    wf.async = 'true';
-    var s = document.getElementsByTagName('script')[0];
-    s.parentNode.insertBefore(wf, s);
-  })(); </script>
-
-      </body>
+  </body>
 
 </html>
