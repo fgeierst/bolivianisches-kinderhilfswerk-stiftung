@@ -9,6 +9,7 @@
   --grid-gap: 2em;
 }
 
+
 /* ---------- body */
 
 body {
@@ -117,6 +118,7 @@ h4 {
   text-decoration: none;
 }
 
+
 /* ------------ layout --*/
 
 .container {
@@ -132,7 +134,21 @@ h4 {
   }
 }
 
-/* ------------ section: header --*/
+
+/* ------------ component: image --*/
+
+.img--responsive {
+  grid-column: 1 / span 2;
+  display: grid;
+}
+
+.img--responsive > img {
+  max-width: 100%;
+  height: auto;
+}
+
+
+/* ------------ component: header --*/
 
 .header a {
   text-decoration: none;
@@ -164,7 +180,8 @@ h4 {
 
 }
 
-/* ------------ section: nav --*/
+
+/* ------------ component: nav --*/
 
 .nav {
   margin: 1rem 0;
@@ -206,7 +223,7 @@ h4 {
 }
 
 
-/* ------------ section: main content  --*/
+/* ------------ component: main content   --*/
 
 @media (min-width: 800px) {
   article:not(.post) {
@@ -220,6 +237,9 @@ h4 {
     grid-column: 2 / span 5;
   }
 }
+
+
+/* ------------ component: footer   --*/
 
 footer::before {
   content: "";
@@ -235,7 +255,8 @@ footer {
   margin-left: 1rem;
 }
 
-/* ------------ special page styles  --*/
+
+/* ------------ component: lists  --*/
 
 .list--wide {
   margin-top: 1rem;
@@ -263,7 +284,8 @@ footer {
   padding-right: 0.5em;
 }
 
-/* ------------ posts  --*/
+
+/* ------------ component: post loop  --*/
 
 .post {
   margin-bottom: 4em;
@@ -290,14 +312,3 @@ footer {
 }
 
 
-/* ------------ images --*/
-
-.img--responsive {
-  grid-column: 1 / span 2;
-  display: grid;
-}
-
-.img--responsive > img {
-  max-width: 100%;
-  height: auto;
-}
