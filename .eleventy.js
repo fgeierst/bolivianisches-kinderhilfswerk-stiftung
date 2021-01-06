@@ -3,7 +3,7 @@ const path = require("path");
 const Image = require("@11ty/eleventy-img");
 
 module.exports = function (eleventyConfig) {
-  eleventyConfig.setTemplateFormats("htm,html,njk,svg,css"); // Add a filter using the Config API
+  eleventyConfig.setTemplateFormats("htm,html,njk,svg,css,woff2"); // Add a filter using the Config API
 
   // Copy `src/css` to `site/css`
   // eleventyConfig.addPassthroughCopy("src/assets");
@@ -25,31 +25,6 @@ module.exports = function (eleventyConfig) {
     },
   };
 };
-
-
-// async function imageShortcode(src, alt, sizes) {
-//   let metadata = await Image(src, {
-//     widths: [300, 600],
-//     formats: ["webp", "jpeg"],
-//     filenameFormat: function (id, src, width, format, options) {
-//       const extension = path.extname(src);
-//       const name = path.basename(src, extension);
-//       return `${name}-${width}w.${format}`;
-//     },
-//     urlPath: "/assets/images/",
-//     outputDir: "./site/assets/images/"    
-//   });
-
-//   let imageAttributes = {
-//     alt,
-//     sizes,
-//     loading: "lazy",
-//     decoding: "async",
-//     class: "img--responsive"
-//   };
-
-//   return Image.generateHTML(metadata, imageAttributes);
-// }
 
 async function imageShortcode(src, alt, sizes = "60vw") {
   if(alt === undefined) {

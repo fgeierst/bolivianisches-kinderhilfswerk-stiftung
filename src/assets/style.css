@@ -4,7 +4,7 @@
   --color-primary: rgb(243, 218, 118);
   --color--text: hsl(0, 0%, 16%);
   --color-lightgrey: rgb(248, 248, 248);
-  --font-title: "Alegreya", serif;
+  --font-title: 'Alegreya', serif;
   --gap: 1em;
   --grid: repeat(6, 1fr);
 }
@@ -13,7 +13,7 @@
 /* ---------- body */
 
 body {
-  font-family: "Nunito", system-ui, sans-serif;
+  font-family: 'Nunito', system-ui, sans-serif;
   font-size: clamp(1rem, 0.5rem + 1vw, 1.25rem);  /* responsive base font-size */
   line-height: 1.5;
   color: var(--color--text);
@@ -74,7 +74,7 @@ tr:first-child>td {
   font-size: 400%;
   margin-bottom: 0rem;
   margin-top: 0.2em;
-  font-family: "Alegreya", serif;
+  font-family: var(--font-title);
   font-weight: 800;
   color: #f3da76;
   line-height: 1;
@@ -93,7 +93,7 @@ h3 {
   font-size: 300%;
   margin-bottom: 0rem;
   margin-top: 0.2em;
-  font-family: "Alegreya", serif;
+  font-family: var(--font-title);
   font-weight: 800;
   color: #f3da76;
   line-height: 1;
@@ -112,7 +112,7 @@ h4 {
   font-size: 140%;
   margin-bottom: 1rem;
   margin-top: 2em;
-  font-family: "Alegreya", serif;
+  font-family: var(--font-title);
   font-weight: 800;
   line-height: 1;
   text-decoration: none;
@@ -240,7 +240,7 @@ border-radius: unset;
 
 .header__title {
   margin: 0;
-  font-family: "Alegreya", serif;
+  font-family: var(--font-title);
   font-weight: 800;
   font-size: 2em;
 }
@@ -268,7 +268,7 @@ border-radius: unset;
 
 .nav__button {
   padding: 0.5em;
-  font-family: "Alegreya", serif;
+  font-family: var(--font-title);
   font-weight: 800;
   list-style-type: none;
   text-align: center;
@@ -366,7 +366,7 @@ footer {
   font-size: 120%;
   margin-bottom: 1em;
   margin-top: 2em;
-  font-family: "Alegreya", serif;
+  font-family: var(--font-title);
   font-weight: 800;
   line-height: 1;
 }

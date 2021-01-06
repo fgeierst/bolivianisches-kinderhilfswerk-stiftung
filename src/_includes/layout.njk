@@ -2,13 +2,15 @@
 <html lang="de">
 
   <head>
+    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ title }}{% if eleventyNavigation.order != 1 %} — Gemeinschaftsstiftung Bolivianisches Kinderhilfswerk{% endif %}</title>
     <meta name="description" content="Die Gemeinschaftsstiftung Bolivianisches Kinderhilfswerk ist in Bolivien für Kinder und Jugendliche tätig, um deren Lebensbedingungen und Zukunft zu verbessern. Sie soll die Arbeit des Vereins Bolivianisches Kinderhilfswerk e.V. langfristig finanziell begleiten und absichern.">
     <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" sizes="any">
     <link rel="stylesheet" href="/assets/style.css">
-    <link href="https://fonts.googleapis.com/css?family=Nunito|Alegreya:800&display=swap" rel="stylesheet">
+    {% include 'fonts.njk' %}
+
   </head>
 
   <body>
