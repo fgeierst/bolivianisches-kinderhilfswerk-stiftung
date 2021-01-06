@@ -1,91 +1,42 @@
 ---
 title: Gemeinschaftsstiftung Bolivianisches Kinderhilfswerk
 date: 2020-04-11
+layout: layout.njk
 eleventyNavigation:
   key: Stiftung
   order: 1
 ---
 
-<!DOCTYPE html>
-<html lang="de">
+  <article>
 
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Gemeinschaftsstiftung Bolivianisches Kinderhilfswerk</title>
-    <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" sizes="any">
-    <meta name="description" content="Die Gemeinschaftsstiftung Bolivianisches Kinderhilfswerk ist in Bolivien für Kinder und Jugendliche tätig, um deren Lebensbedingungen und Zukunft zu verbessern. Sie soll die Arbeit des Vereins Bolivianisches Kinderhilfswerk e.V. langfristig finanziell begleiten und absichern.">
-    <link rel="stylesheet" href="/assets/style.css">
-    <link rel="preconnect" href="http://fonts.googleapis.com">
-    <link rel="preconnect" href="http://fonts.gstatic.com">
-  </head>
+    <section>
 
-  <body>
-    <div class="container">
+      <h2 class="page__title">
+        Die Stiftung</h2>
 
-      {% include 'header.njk' %}
+      <p>Die
+        <i>Gemeinschaftsstiftung Bolivianisches Kinderhilfswerk</i>
+        soll die Arbeit des Vereins
+        <i>Bolivianisches Kinderhilfswerk e.V.</i>
+        langfristig, auch für künftige Generationen, finanziell begleiten und absichern.</p>
 
-      <main>
+      <p>Das
+        <i>Bolivianische Kinderhilfswerk e.V.</i>
+        ist in Bolivien für Kinder und Jugendliche tätig, um deren Lebensbedingungen und Zukunft zu verbessern. Es fördert Einrichtungen und Maßnahmen für diesen Personenkreis und trägt durch die Entsendung von Freiwilligen in die Projekte zur Völkerverständigung bei.
+      </p>
 
-        <article>
+      <p>Die Stiftung konnte nur entstehen, da es einen Menschen gab, der über sein Leben hinaus seine Unterstützung unseren Aufgaben zukommen lassen wollte. Ohne Anspruch auf die Nennung seines Namens vermachte er uns einen Teil seines Nachlasses. Die Erträge bilden die Grundlage der Stiftung und geben damit auch anderen Menschen die Möglichkeiten für Zustiftungen.</p>
 
-          <section>
+    </section>
 
-            <h2 class="page__title">
-              Die Stiftung</h2>
+    {% image "./src/assets/photos/200901_comedor.jpg", "Krippenkinder sitzen an einem langen Tisch beim Essen", "(min-width: 30em) 50vw, 100vw" %}
 
-            <p>Die
-              <i>Gemeinschaftsstiftung Bolivianisches Kinderhilfswerk</i>
-              soll die Arbeit des Vereins
-              <i>Bolivianisches Kinderhilfswerk e.V.</i>
-              langfristig, auch für künftige Generationen, finanziell begleiten und absichern.</p>
+    <section>
+      <h3>Bolivien</h3>
 
-            <p>Das
-              <i>Bolivianische Kinderhilfswerk e.V.</i>
-              ist in Bolivien für Kinder und Jugendliche tätig, um deren Lebensbedingungen und Zukunft zu verbessern. Es fördert Einrichtungen und Maßnahmen für diesen Personenkreis und trägt durch die Entsendung von Freiwilligen in die Projekte zur Völkerverständigung bei.
-            </p>
+      <p>Fast die Hälfte der 7,8 Mio. Einwohner leben unterhalb der Armutsgrenze. Hohe Auslandsschulden, Korruption, Arbeitslosigkeit, Inflation und schwierige politische Verhältnisse führen zu einer notleidenden Situation insbesondere der indigenen Bevölkerung. Die verarmten Campesinos flüchten in die Stadt, dadurch verschärfen sich dort die sozialen Probleme. Am Schlimmsten trifft es wie immer die Schwächsten - die Kinder.</p>
 
-            <p>Die Stiftung konnte nur entstehen, da es einen Menschen gab, der über sein Leben hinaus seine Unterstützung unseren Aufgaben zukommen lassen wollte. Ohne Anspruch auf die Nennung seines Namens vermachte er uns einen Teil seines Nachlasses. Die Erträge bilden die Grundlage der Stiftung und geben damit auch anderen Menschen die Möglichkeiten für Zustiftungen.</p>
+    </section>
 
-          </section>
+  </article>
 
-          {% image "./src/assets/photos/200901_comedor.jpg", "Krippenkinder sitzen an einem langen Tisch beim Essen", "(min-width: 30em) 50vw, 100vw" %}
-
-          <section>
-            <h3>Bolivien</h3>
-
-            <p>Fast die Hälfte der 7,8 Mio. Einwohner leben unterhalb der Armutsgrenze. Hohe Auslandsschulden, Korruption, Arbeitslosigkeit, Inflation und schwierige politische Verhältnisse führen zu einer notleidenden Situation insbesondere der indigenen Bevölkerung. Die verarmten Campesinos flüchten in die Stadt, dadurch verschärfen sich dort die sozialen Probleme. Am Schlimmsten trifft es wie immer die Schwächsten - die Kinder.</p>
-
-          </section>
-
-        </article>
-
-      </main>
-
-      {% include 'footer.njk' %}
-
-    </div>
-    <!-- /container -->
-
-    <script type="text/javascript">
-      WebFontConfig = {
-        google: {
-          families: ['Nunito|Alegreya:800']
-        }
-      };
-      (function () {
-        var wf = document.createElement('script');
-        wf.src = 'https://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
-        wf.type = 'text/javascript';
-        wf.async = 'true';
-        var s = document.getElementsByTagName('script')[0];
-        s
-          .parentNode
-          .insertBefore(wf, s);
-      })();
-    </script>
-
-  </body>
-
-</html>
