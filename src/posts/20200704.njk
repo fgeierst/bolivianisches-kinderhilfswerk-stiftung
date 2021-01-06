@@ -1,5 +1,5 @@
 ---
-title: Julibrief 2020
+title: Juli 2020
 date: 2020-07-04
 author: Karen Hochmann
 ---
@@ -49,59 +49,14 @@ der Stadt gesammelt wurden.<p>
   begünstigten Familien.
 </p>
 </section>
-<style>
-    .gallery {
-        grid-column: 1 / -1;
-        margin-top: 2em;
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: var(--gap);
-    }
-    .gallery figure {
-      margin: 0;
-    }
-
-    .gallery img {
-      width: 100%;
-    }
-</style>
 
 <section class="gallery">
 
-  <figure>
-    <a href="20200522-wa0007-visitas-a-las-casas-de-los-becados.jpg">
-      <img class="img--responsive" src="20200522-wa0007-visitas-a-las-casas-de-los-becados-300.jpg" alt="Besuche in den Häusern der begünstigten Familien" loading="lazy">
-    </a>
-    <figcaption>Besuche in den Häusern der begünstigten Familien</figcaption>
-  </figure>
-
-  <figure>
-    <a href="20200327-wa0011-entrega-de-dinero-a-familias-becadas.jpg">
-      <img class="img--responsive" src="20200327-wa0011-entrega-de-dinero-a-familias-becadas-300.jpg" alt="Geldauszahlung an eine bedürftige Familie" loading="lazy">
-    </a>
-    <figcaption>Geldauszahlung an eine bedürftige Familie</figcaption>
-  </figure>
-
-  <figure>
-    <a href="20200424-wa0025-arroz-aceite-azucar-fideo-leche.jpg">
-      <img class="img--responsive" src="20200424-wa0025-arroz-aceite-azucar-fideo-leche-300.jpg" alt="Übergabe einer Tüte mit Lebensmitteln: Reis, Öl, Zucker, Nudeln, Milch" loading="lazy">
-    </a>
-    <figcaption>Übergabe einer Tüte mit Lebensmitteln: Reis, Öl, Zucker, Nudeln, Milch</figcaption>
-  </figure>
-
-  <figure>
-    <a href="20200424-wa0028-entrega-de-bolsa-de-víveres.jpg">
-      <img class="img--responsive" src="20200424-wa0028-entrega-de-bolsa-de-víveres-300.jpg" alt="Ausgabe eines Lebensmittelbeutels" loading="lazy">
-    </a>
-    <figcaption>Ausgabe eines Lebensmittelbeutels</figcaption>
-  </figure>
-
-  <figure >
-    <a href="20200521-wa0026-entrega-de-cuna-a-familia.jpg">
-      <img class="img--responsive" src="20200521-wa0026-entrega-de-cuna-a-familia-300.jpg" alt="Übergabe eines Kinderbettes an die Familie" loading="lazy">
-    </a>
-    <figcaption>Übergabe eines Kinderbettes an die Familie</figcaption>
-  </figure>
+  {% image "./src/posts/20200704/20200522-visitas-a-las-casas-de-los-becados.jpg", "Besuche in den Häusern der begünstigten Familien" %}
+  {% image "./src/posts/20200704/20200327-entrega-de-dinero-a-familias-becadas.jpg", "Geldauszahlung an eine bedürftige Familie" %}
+  {% image "./src/posts/20200704/20200424-arroz-aceite-azucar-fideo-leche.jpg", "Übergabe einer Tüte mit Lebensmitteln: Reis, Öl, Zucker, Nudeln, Milch" %}
+  {% image "./src/posts/20200704/20200424-entrega-de-bolsa-de-víveres.jpg", "Ausgabe eines Lebensmittelbeutels" %}
+  {% image "./src/posts/20200704/20200521-entrega-de-cuna-a-familia.jpg", "Übergabe eines Kinderbettes an die Familie" %}
 
 </section>
 

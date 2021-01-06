@@ -1,6 +1,6 @@
 ---
 title: Blog
-date: 2020-07-22
+date: 2020-09-09
 layout: layout.njk
 eleventyNavigation:
   key: Blog
@@ -21,10 +21,7 @@ eleventyNavigation:
         <p class="post__metadata">Von
           {{ post.data.author }},
           {{  post.date.toLocaleDateString("de",{year:"numeric",month:"2-digit", day:"numeric"}) }}</p>
-        <p>{{ post.data.page.excerpt | safe }}</p>
-        <p>
-          <a href="{{ post.url }}">Weiterlesen...</a>
-        </p>
+        <p>{{ post.data.page.excerpt | safe | striptags(true) | truncate(320)}} <a href="{{ post.url }}">Weiterlesen</a></p>
       </article>
     {%- endfor -%}
 
