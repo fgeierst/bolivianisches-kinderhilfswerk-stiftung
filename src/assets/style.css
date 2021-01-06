@@ -5,6 +5,8 @@
   --color--text: hsl(0, 0%, 16%);
   --font-title: "Alegreya", serif;
   --gap: 1em;
+  --grid: repeat(6, 1fr);
+  --grid-gap: 2em;
 }
 
 /* ---------- body */
@@ -14,7 +16,7 @@ body {
   grid-template-columns: 1fr minmax(min-content, 50em) 1fr;
   font-family: "Nunito", sans-serif;
   font-variation-settings: "wght" 90;
-  font-size: clamp(1rem, 0.5rem + 1vw, 1.25rem);
+  font-size: clamp(1rem, 0.5rem + 1vw, 1.25rem); /* responsive base font-size */
   line-height: 1.5;
   margin: 0em;
   color: var(--color--text);
@@ -22,16 +24,10 @@ body {
 }
 
 
-
 /* ------------ basic tag styling --*/
 
 a {
   color: inherit;
-}
-
-.img--responsive {
-  max-width: 100%;
-  grid-column: 1 / span 2;
 }
 
 td {
@@ -72,18 +68,6 @@ tr:first-child > td {
     border-top: none;
   }
 }
-
-/* h1 {
-  margin: 1em 0 0 0;
-  font-family: "Alegreya", serif;
-  font-weight: 900;
-}
-
-@media (max-width: 800px) {
-  h1 {
-    font-size: 140%;
-  }
-} */
 
 .page__title:not(.post__title) {
   font-size: 400%;
@@ -156,42 +140,25 @@ h4 {
 
 .header {
   display: flex;
-  /* flex-wrap: wrap; */
-  /* gap: var(--gap); */
   align-items: center;
-  /* display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  align-items: center; */
-
 }
 
-/* @media (max-width: 800px) {
-  .header {
-    grid-auto-flow: column;
-    grid-template-rows: auto auto auto;
-    grid-template-columns: 1fr;
-  }
-} */
 
 .header__logo {
    width: 6em;
    width: clamp(3rem, 3rem + 10vw, 10rem);
    margin-right: calc(var(--gap)/2);
-  /*max-width: 100%; */
 }
 
 .header__title {
-  /* grid-column: 2 / span 4; */
   margin: 0;
   font-family: "Alegreya", serif;
   font-weight: 800;
   font-size: 2em;
-  /* font-size: clamp(1.5rem, 0.5rem + 3vw, 2.5rem); */
 }
 
 @media (max-width: 600px) {
   .header__title {
-    /* grid-column: auto; */
     font-size: 140%;
   }
 
@@ -245,12 +212,12 @@ h4 {
   article:not(.post) {
     margin-top: 2rem;
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-gap: 2rem;
+    grid-template-columns: var(--grid);
+    grid-gap: var(--grid-gap);
   }
 
   section {
-    grid-column: 2 / span 4;
+    grid-column: 2 / span 5;
   }
 }
 
@@ -296,8 +263,6 @@ footer {
   padding-right: 0.5em;
 }
 
-/* ------------ // --*/
-
 /* ------------ posts  --*/
 
 .post {
@@ -322,4 +287,17 @@ footer {
 
 .post__title a {
   text-decoration: none;
+}
+
+
+/* ------------ images --*/
+
+.img--responsive {
+  grid-column: 1 / span 2;
+  display: grid;
+}
+
+.img--responsive > img {
+  max-width: 100%;
+  height: auto;
 }
