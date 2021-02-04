@@ -212,8 +212,8 @@ article:not(.post) {
 
 
 .header__logo {
-  width: 6em;
   width: clamp(3rem, 3rem + 10vw, 10rem);
+  height: auto;
   margin-right: calc(var(--gap)/2);
 }
 
