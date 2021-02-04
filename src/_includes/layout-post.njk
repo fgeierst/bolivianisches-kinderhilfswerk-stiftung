@@ -1,52 +1,17 @@
----
-eleventyNavigation:
-  parent: Blog
----
-<!DOCTYPE html>
-<html lang="de">
+{% extends "layout.njk" %}
 
-  <head>
-    
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ title }}
-      - Gemeinschaftsstiftung Bolivianisches Kinderhilfswerk</title>
-    <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" sizes="any">
-    <link rel="stylesheet" href="/assets/style.css">
-    {% include 'fonts.njk' %}
+{% block content %}
+  <article>
 
-  </head>
+    <section>
+      <h1 class="page__title">
+        {{ title }}
+      </h1>
+      <p class="post__metadata">Von
+        {{ author }}</p>
+    </section>
 
-  <body>
+    {{ content | safe }}
 
-    <div class="container">
-
-      {% include 'header.njk' %}
-
-      {% include 'nav.njk' %}
-
-      <main class="main">
-
-        <article>
-
-          <section>
-            <h1 class="page__title">
-              {{ title }}
-            </h1>
-            <p class="post__metadata">Von
-              {{ author }}</p>
-          </section>
-
-          {{ content | safe }}
-
-        </article>
-
-      </main>
-
-      {% include 'footer.njk' %}
-
-    </div>
-
-  </body>
-
-</html>
+  </article>
+{% endblock %}

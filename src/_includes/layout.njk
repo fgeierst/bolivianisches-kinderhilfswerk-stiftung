@@ -23,7 +23,9 @@
 
       <main id="main">
 
+        {% block content %}
         {{ content | safe }}
+        {% endblock %}
 
       </main>
 
