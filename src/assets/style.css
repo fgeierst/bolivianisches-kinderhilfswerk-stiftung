@@ -193,7 +193,6 @@ article:not(.post) {
   left: .5em;
   padding: .5em;
   transform: translateY(-600%);
-  transition: transform 0.3s;
   font-family: var(--font-title);
 }
 
@@ -209,7 +208,6 @@ article:not(.post) {
   display: flex;
   align-items: center;
 }
-
 
 .header__logo {
   width: clamp(3rem, 3rem + 10vw, 10rem);
