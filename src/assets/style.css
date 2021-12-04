@@ -2,7 +2,7 @@
 
 :root {
   --color-primary: rgb(243, 218, 118);
-  --color--text: hsl(0, 0%, 16%);
+  --color-text: hsl(0, 0%, 16%);
   --color-lightgrey: rgb(248, 248, 248);
   --font-title: 'Alegreya', serif;
   --gap: 1em;
@@ -17,7 +17,7 @@ body {
   font-family: 'Nunito', system-ui, sans-serif;
   font-size: clamp(1rem, 0.5rem + 1vw, 1.25rem);  /* responsive base font-size */
   line-height: 1.5;
-  color: var(--color--text);
+  color: var(--color-text);
   border-top: .8em solid var(--color-primary);
   margin: 0em;
   display: grid;
