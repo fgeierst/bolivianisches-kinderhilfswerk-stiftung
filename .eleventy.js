@@ -3,7 +3,7 @@ const path = require("path");
 const Image = require("@11ty/eleventy-img");
 
 module.exports = function (eleventyConfig) {
-  eleventyConfig.setTemplateFormats("htm,html,njk,svg,css,woff2"); // Add a filter using the Config API
+  eleventyConfig.setTemplateFormats("htm,html,njk,svg,css,woff2,md"); // Add a filter using the Config API
 
   // Copy `src/css` to `site/css`
   // eleventyConfig.addPassthroughCopy("src/assets");
@@ -17,6 +17,7 @@ module.exports = function (eleventyConfig) {
   });
 
   eleventyConfig.addNunjucksAsyncShortcode("image", imageShortcode);
+  eleventyConfig.addLiquidShortcode("image", imageShortcode);
 
   return {
     dir: {
