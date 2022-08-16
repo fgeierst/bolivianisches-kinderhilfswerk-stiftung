@@ -1,124 +1,14 @@
+/* global */
+@use 'variables';
+@use 'base';
+@use 'typography';
+@use 'tables';
+
+/* components */
 @use 'header';
 
 
-/* ---------- variables */
-:root {
-  --color-primary: rgb(243, 218, 118);
-  --color-text: hsl(0, 0%, 16%);
-  --color-lightgrey: rgb(248, 248, 248);
-  --font-title: 'Alegreya', serif;
-  --gap: 1em;
-  --gap-thin: .15em;
-  --grid: repeat(6, 1fr);
-}
 
-
-/* ---------- body */
-
-body {
-  font-family: 'Nunito', system-ui, sans-serif;
-  font-size: clamp(1rem, 0.5rem + 1vw, 1.25rem);  /* responsive base font-size */
-  line-height: 1.5;
-  color: var(--color-text);
-  border-top: .8em solid var(--color-primary);
-  margin: 0;
-  display: grid;
-  grid-template-columns: 1fr minmax(min-content, 50em) 1fr;
-}
-
-
-/* ------------ basic tag styling --*/
-
-a {
-  color: inherit;
-}
-
-td {
-  vertical-align: top;
-  padding-right: 2rem;
-  border-bottom: 2px dotted var(--color-primary);
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
-}
-
-tr:first-child>td {
-  border-top: 2px dotted var(--color-primary);
-}
-
-@media (max-width: 800px) {
-  tr {
-    display: grid;
-    grid-auto-flow: row;
-    border-bottom: 2px dotted var(--color-primary);
-  }
-
-  td {
-    border-bottom: none;
-  }
-
-  td:nth-child(2) {
-    padding-left: 2rem;
-    padding-top: 0;
-    padding-bottom: 1rem;
-  }
-
-  td:nth-child(1) {
-    padding-top: 0;
-    padding-bottom: 0;
-  }
-
-  tr:first-child>td:nth-child(2) {
-    border-top: none;
-  }
-}
-
-.page__title:not(.post__title) {
-  font-size: 400%;
-  margin-bottom: 0rem;
-  margin-top: 0.2em;
-  font-family: var(--font-title);
-  font-weight: 800;
-  color: #f3da76;
-  line-height: 1;
-}
-
-@media (max-width: 800px) {
-  .page__title:not(.post__title) {
-    font-size: 140%;
-    color: inherit;
-    margin-bottom: 1rem;
-    margin-top: 2em;
-  }
-}
-
-h3 {
-  font-size: 300%;
-  margin-bottom: 0rem;
-  margin-top: 0.2em;
-  font-family: var(--font-title);
-  font-weight: 800;
-  color: #f3da76;
-  line-height: 1;
-}
-
-@media (max-width: 800px) {
-  h3 {
-    font-size: 140%;
-    color: inherit;
-    margin-bottom: 1rem;
-    margin-top: 2em;
-  }
-}
-
-h4 {
-  font-size: 140%;
-  margin-bottom: 1rem;
-  margin-top: 2em;
-  font-family: var(--font-title);
-  font-weight: 800;
-  line-height: 1;
-  text-decoration: none;
-}
 
 
 /* ------------ layout --*/
