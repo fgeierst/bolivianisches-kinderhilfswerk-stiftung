@@ -1,13 +1,12 @@
+const EleventyVitePlugin = require("@11ty/eleventy-plugin-vite");
 const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
 const path = require("path");
 const Image = require("@11ty/eleventy-img");
 
 module.exports = function (eleventyConfig) {
-  eleventyConfig.setTemplateFormats("htm,html,njk,svg,css,woff2,md"); // Add a filter using the Config API
+  eleventyConfig.setTemplateFormats("htm,html,njk,svg,woff2,md");
 
-  // Copy `src/css` to `site/css`
-  // eleventyConfig.addPassthroughCopy("src/assets");
-  // eleventyConfig.addPassthroughCopy("src/media");
+  eleventyConfig.addPlugin(EleventyVitePlugin);
 
   eleventyConfig.addPlugin(eleventyNavigationPlugin);
 
@@ -18,8 +17,12 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.addNunjucksAsyncShortcode("image", imageShortcode);
   eleventyConfig.addLiquidShortcode("image", imageShortcode);
+  
+  eleventyConfig.setServerPassthroughCopyBehavior("copy");
+  eleventyConfig.addPassthroughCopy('src/assets/scss');
 
   return {
+    passthroughFileCopy: true,
     dir: {
       input: "src",
       output: "site",

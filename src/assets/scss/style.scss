@@ -1,5 +1,7 @@
-/* ---------- variables */
+@use 'header';
 
+
+/* ---------- variables */
 :root {
   --color-primary: rgb(243, 218, 118);
   --color-text: hsl(0, 0%, 16%);
@@ -19,7 +21,7 @@ body {
   line-height: 1.5;
   color: var(--color-text);
   border-top: .8em solid var(--color-primary);
-  margin: 0em;
+  margin: 0;
   display: grid;
   grid-template-columns: 1fr minmax(min-content, 50em) 1fr;
 }
@@ -181,50 +183,7 @@ article:not(.post) {
 }
 
 
-/* ------------ component: header --*/
 
-.skip-link {
-  background: var(--color-primary);
-  position: absolute;
-  top:.5em;
-  left: .5em;
-  padding: .5em;
-  transform: translateY(-600%);
-  font-family: var(--font-title);
-}
-
-.skip-link:focus-within {
-  transform: translateY(0%);
-}
-
-.header a {
-  text-decoration: none;
-}
-
-.header {
-  display: flex;
-  align-items: center;
-}
-
-.header__logo {
-  width: clamp(3rem, 3rem + 10vw, 10rem);
-  height: auto;
-  margin-right: calc(var(--gap)/2);
-}
-
-.header__title {
-  margin: 0;
-  font-family: var(--font-title);
-  font-weight: 800;
-  font-size: 2em;
-  line-height: 1.2;
-}
-
-@media (max-width: 600px) {
-  .header__title {
-    font-size: 140%;
-  }
-}
 
 
 /* ------------ component: nav --*/
