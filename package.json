@@ -16,7 +16,6 @@
     "path": "^0.12.7"
   },
   "browserslist": [
-    "defaults",
-    "not ie 11"
+    "> 1% in DE and not dead"
   ]
 }
