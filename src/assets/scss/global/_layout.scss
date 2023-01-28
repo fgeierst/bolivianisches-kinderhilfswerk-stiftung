@@ -1,0 +1,14 @@
+/* ------------ layout -- */
+
+.container {
+  margin: 2rem;
+  grid-column: 2;
+  display: grid;
+  padding-bottom: 4rem;
+}
+
+@media (max-width: 600px) {
+  .container {
+    margin: .7rem;
+  }
+}

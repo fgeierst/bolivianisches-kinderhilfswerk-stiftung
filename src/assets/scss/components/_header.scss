@@ -1,9 +1,9 @@
-/* ------------ component: header --*/
+/* ------------ component: header -- */
 
 .skip-link {
   background: var(--color-primary);
   position: absolute;
-  top:.5em;
+  top: .5em;
   left: .5em;
   padding: .5em;
   transform: translateY(-600%);
@@ -26,7 +26,7 @@
 .header__logo {
   width: clamp(3rem, 3rem + 10vw, 10rem);
   height: auto;
-  margin-right: calc(var(--gap)/2);
+  margin-right: calc(var(--gap) / 2);
 }
 
 .header__title {

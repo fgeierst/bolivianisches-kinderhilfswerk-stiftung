@@ -1,0 +1,33 @@
+/* ------------ component: post loop  -- */
+
+.post {
+  margin-bottom: 4em;
+
+  /* transition: transform .2s ease-in-out; */
+}
+
+/* TODO: add animation on hover */
+
+/* .post:hover {
+  transform: scale(1.02);
+} */
+
+.post__metadata {
+  font-style: italic;
+  border-left: .5em solid var(--color-primary);
+  padding-left: .5em;
+  margin-bottom: 1.5em;
+}
+
+.post__title {
+  font-size: 120%;
+  margin-bottom: 1em;
+  margin-top: 2em;
+  font-family: var(--font-title);
+  font-weight: 800;
+  line-height: 1;
+}
+
+.post__title a {
+  text-decoration: none;
+}

@@ -1,0 +1,38 @@
+/* ------------ component: nav -- */
+@use '../global/variables' as *;
+
+.nav {
+  margin: 1rem 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: .25em;
+  grid-auto-flow: column;
+  grid-auto-columns: 1fr;
+  font-size: 110%;
+
+  &__button {
+    padding: .5em;
+    font-family: var(--font-title);
+    font-weight: 800;
+    list-style-type: none;
+    text-align: center;
+    background-color: var(--color-lightgrey);
+
+    @media (min-width: $breakpoint) {
+      flex: 1;
+    }
+
+    &:hover:not(.nav__button--active) {
+      background-color: rgb(233 233 233);
+    }
+
+    &--active {
+      background-color: var(--color-primary);
+    }
+
+    > a {
+      text-decoration: none;
+    }
+  }
+}

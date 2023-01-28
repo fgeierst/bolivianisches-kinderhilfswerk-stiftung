@@ -1,37 +1,38 @@
 /* ------------ typography ------------ */
+@use '../global/variables' as *;
 
 .page__title:not(.post__title) {
   font-size: 400%;
   margin-bottom: 0;
-  margin-top: 0.2em;
+  margin-top: .2em;
   font-family: var(--font-title);
   font-weight: 800;
   color: #f3da76;
   line-height: 1;
 
-	@media (max-width: 800px) {
-		font-size: 140%;
-		color: inherit;
-		margin-bottom: 1rem;
-		margin-top: 2em;
-	}
+  @media (max-width: $breakpoint) {
+    font-size: 140%;
+    color: inherit;
+    margin-bottom: 1rem;
+    margin-top: 2em;
+  }
 }
 
 h3, .h3 {
   font-size: 300%;
   margin-bottom: 0;
-  margin-top: 0.2em;
+  margin-top: .2em;
   font-family: var(--font-title);
   font-weight: 800;
   color: #f3da76;
   line-height: 1;
 
-	@media (max-width: 800px) {
-		font-size: 140%;
-		color: inherit;
-		margin-bottom: 1rem;
-		margin-top: 2em;
-	}
+  @media (max-width: $breakpoint) {
+    font-size: 140%;
+    color: inherit;
+    margin-bottom: 1rem;
+    margin-top: 2em;
+  }
 }
 
 h4, .h4 {
