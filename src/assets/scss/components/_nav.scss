@@ -1,0 +1,39 @@
+/* ------------ component: nav -- */
+@use '../global/variables' as *;
+
+.nav {
+  margin: 1rem 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: .25em;
+  grid-auto-flow: column;
+  grid-auto-columns: 1fr;
+  font-size: 110%;
+
+  &__item {
+    list-style-type: none;
+
+    @media (min-width: $breakpoint) {
+      flex: 1;
+    }
+  }
+
+  &__link {
+    display: block;
+    padding: .5em;
+    text-decoration: none;
+    font-family: var(--font-title);
+    font-weight: var(--font-weight-bold);
+    text-align: center;
+    background-color: var(--color-lightgrey);
+
+    &[aria-current] {
+      background-color: var(--color-primary);
+    }
+
+    &:hover:not([aria-current]) {
+      background-color: rgb(233 233 233);
+    }
+  }
+}

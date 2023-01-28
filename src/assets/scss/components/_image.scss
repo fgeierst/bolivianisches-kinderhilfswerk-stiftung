@@ -1,0 +1,25 @@
+/* ------------ component: image -- */
+@use '../global/variables' as *;
+
+.img--responsive {
+  justify-self: center;
+  display: grid;
+}
+
+.img--responsive > img {
+  max-width: 100%;
+  height: auto;
+  border-radius: var(--gap);
+  transform: rotate(1deg);
+}
+
+@media (min-width: $breakpoint) {
+  .img--responsive {
+    grid-column: 1 / span 3;
+  }
+
+  .img--responsive > img {
+    max-width: unset;
+    width: 100%;
+  }
+}

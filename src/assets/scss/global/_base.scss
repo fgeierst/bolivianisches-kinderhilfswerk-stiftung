@@ -1,10 +1,11 @@
 /* ---------- body */
 
 body {
-  font-family: 'Nunito', system-ui, sans-serif;
-  font-size: clamp(1rem, 0.5rem + 1vw, 1.25rem);  /* responsive base font-size */
+  font-family: Nunito, system-ui, sans-serif;
+  font-size: clamp(1rem, .5rem + 1vw, 1.25rem);  /* responsive base font-size */
   line-height: 1.5;
   color: var(--color-text);
+  background-color: var(--color-background);
   border-top: .8em solid var(--color-primary);
   margin: 0;
   display: grid;
@@ -12,7 +13,7 @@ body {
 }
 
 
-/* ------------ basic tag styling --*/
+/* ------------ basic element styling -- */
 
 a {
   color: inherit;

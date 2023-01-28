@@ -1,0 +1,15 @@
+/* ------------ component: footer   -- */
+
+footer:before {
+  content: '';
+  display: block;
+  border-bottom: .5em solid #f3da76;
+  width: 5rem;
+  margin-bottom: .5rem;
+  margin-top: 2rem;
+  margin-left: -1rem;
+}
+
+footer {
+  margin-left: 1rem;
+}

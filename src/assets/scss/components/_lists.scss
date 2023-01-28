@@ -1,0 +1,29 @@
+/* ------------ component: lists  -- */
+
+.list--wide {
+  margin-top: 1rem;
+}
+
+.list--wide > li {
+  margin-bottom: 1rem;
+}
+
+.list--level2 {
+  list-style-type: lower-latin;
+}
+
+.satzung__list {
+  counter-reset: section;
+}
+
+.satzung__list > section > h4:not(.list__item--dontcount) {
+  display: table;
+}
+
+.satzung__list > section > h4:not(.list__item--dontcount):before {
+  counter-increment: section;
+  content: '§ ' counter(section);
+  display: table-cell;
+  white-space: nowrap;
+  padding-right: .5em;
+}

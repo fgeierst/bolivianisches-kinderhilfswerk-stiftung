@@ -1,0 +1,19 @@
+/* ------------ component: article   -- */
+@use '../global/variables' as *;
+
+article:not(.post) {
+  display: grid;
+  grid-gap: var(--gap);
+}
+
+@media (min-width: $breakpoint) {
+  article:not(.post) {
+    margin-top: 2rem;
+    grid-template-columns: var(--grid);
+    gap: calc(var(--gap) * 2);
+  }
+
+  section {
+    grid-column: 2 / span 5;
+  }
+}
