@@ -5,16 +5,14 @@
   "main": "index.html",
   "author": "Florian Geierstanger",
   "scripts": {
-    "build": "npx eleventy",
-    "serve": "npx eleventy --serve",
-    "watch": "npx eleventy --watch",
-    "debug": "DEBUG=* npx eleventy"
+    "dev": "npx eleventy --serve  --incremental",
+    "build": "npx eleventy"
   },
   "devDependencies": {
-    "@11ty/eleventy": "2.0.0-canary.14",
+    "@11ty/eleventy": "2.0.0-beta.2",
     "@11ty/eleventy-img": "^2.0.1",
     "@11ty/eleventy-navigation": "^0.3.5",
-    "@11ty/eleventy-plugin-vite": "^1.0.0",
+    "@11ty/eleventy-plugin-vite": "^4.0.0",
     "path": "^0.12.7",
     "sass": "^1.57.1"
   },
