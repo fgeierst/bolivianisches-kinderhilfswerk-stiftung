@@ -1,3 +1,3 @@
 <footer>
-		Stand vom	<time>{{  page.date.toLocaleDateString("de",{year:"numeric",month:"2-digit", day:"numeric"}) }}</time>
+		Stand vom	<time datetime="{{ page.date.toISOString() }}" >{{  page.date.toLocaleDateString("de-DE",{ year: 'numeric', month: 'long', day: 'numeric'}) }}</time>
 </footer>
