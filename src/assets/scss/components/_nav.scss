@@ -35,5 +35,10 @@
     &:hover:not([aria-current]) {
       background-color: rgb(233 233 233);
     }
+
+    &:focus-visible {
+      outline: 2px solid var(--color-text);
+      outline-offset: -2px;
+    }
   }
 }
