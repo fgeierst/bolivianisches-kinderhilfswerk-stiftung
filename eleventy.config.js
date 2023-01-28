@@ -4,7 +4,7 @@ const path = require("path");
 const Image = require("@11ty/eleventy-img");
 
 module.exports = function (eleventyConfig) {
-  eleventyConfig.setTemplateFormats("htm,html,njk,svg,woff2,md");
+  eleventyConfig.setTemplateFormats("njk,svg,woff2,md");
 
   eleventyConfig.addPlugin(EleventyVitePlugin);
   eleventyConfig.addPlugin(eleventyNavigationPlugin);
