@@ -7,7 +7,6 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.setTemplateFormats("htm,html,njk,svg,woff2,md");
 
   eleventyConfig.addPlugin(EleventyVitePlugin);
-
   eleventyConfig.addPlugin(eleventyNavigationPlugin);
 
   eleventyConfig.setFrontMatterParsingOptions({
