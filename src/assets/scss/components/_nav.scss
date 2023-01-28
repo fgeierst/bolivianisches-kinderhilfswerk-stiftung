@@ -11,28 +11,29 @@
   grid-auto-columns: 1fr;
   font-size: 110%;
 
-  &__button {
-    padding: .5em;
-    font-family: var(--font-title);
-    font-weight: 800;
+  &__item {
     list-style-type: none;
-    text-align: center;
-    background-color: var(--color-lightgrey);
 
     @media (min-width: $breakpoint) {
       flex: 1;
     }
+  }
 
-    &:hover:not(.nav__button--active) {
-      background-color: rgb(233 233 233);
-    }
+  &__link {
+    display: block;
+    padding: .5em;
+    text-decoration: none;
+    font-family: var(--font-title);
+    font-weight: var(--font-weight-bold);
+    text-align: center;
+    background-color: var(--color-lightgrey);
 
-    &--active {
+    &[aria-current] {
       background-color: var(--color-primary);
     }
 
-    > a {
-      text-decoration: none;
+    &:hover:not([aria-current]) {
+      background-color: rgb(233 233 233);
     }
   }
 }

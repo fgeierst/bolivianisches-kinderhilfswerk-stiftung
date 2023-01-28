@@ -32,7 +32,7 @@
 .header__title {
   margin: 0;
   font-family: var(--font-title);
-  font-weight: 800;
+  font-weight: var(--font-weight-bold);
   font-size: 2em;
   line-height: 1.2;
 }
