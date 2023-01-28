@@ -3,9 +3,9 @@
 @use 'global/base';
 @use 'global/typography';
 @use 'global/layout';
-@use 'tables';
 
 /* components */
+@use 'components/tables';
 @use 'components/header';
 @use 'components/article';
 @use 'components/image';
