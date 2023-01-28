@@ -14,8 +14,7 @@ module.exports = function (eleventyConfig) {
     excerpt_separator: "<!-- excerpt -->",
   });
 
-  eleventyConfig.addNunjucksAsyncShortcode("image", imageShortcode);
-  eleventyConfig.addLiquidShortcode("image", imageShortcode);
+  eleventyConfig.addAsyncShortcode("image", imageShortcode);
   
   eleventyConfig.setServerPassthroughCopyBehavior("copy");
   eleventyConfig.addPassthroughCopy('src/assets/scss');
@@ -29,38 +28,21 @@ module.exports = function (eleventyConfig) {
   };
 };
 
-async function imageShortcode(src, alt, sizes = "60vw") {
-  if(alt === undefined) {
-    // You bet we throw an error on missing alt (alt="" works okay)
-    throw new Error(`Missing \`alt\` on responsiveimage from: ${src}`);
-  }
-
+async function imageShortcode(src, alt, sizes = "90vw") {
   let metadata = await Image(src, {
-    widths: [400,800],
-    formats: ['avif', 'jpeg'],
-    filenameFormat: function (id, src, width, format, options) {
-      const extension = path.extname(src);
-      const name = path.basename(src, extension);
-      return `${name}-${width}w.${format}`;
-    },
+    widths: [400, 800],
+    formats: ["webp"],
     urlPath: "/assets/images/",
-    outputDir: "./site/assets/images/"    
+    outputDir: "./site/assets/images/",
   });
 
-  let lowsrc = metadata.jpeg[0];
+  let imageAttributes = {
+    alt,
+    sizes,
+    class: 'image',
+    loading: "lazy",
+    decoding: "async",
+  };
 
-  return `<picture class="img--responsive">
-    ${Object.values(metadata).map(imageFormat => {
-      return `  <source type="${imageFormat[0].sourceType}" srcset="${imageFormat.map(entry => entry.srcset).join(", ")}" sizes="${sizes}">`;
-    }).join("\n")}
-      <img
-        src="${lowsrc.url}"
-        width="${lowsrc.width}"
-        height="${lowsrc.height}"
-        alt="${alt}"
-        loading="lazy"
-        decoding="async">
-    </picture>`;
+  return Image.generateHTML(metadata, imageAttributes);
 }
-
-

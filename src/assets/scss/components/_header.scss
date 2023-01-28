@@ -21,6 +21,10 @@
 .header {
   display: flex;
   align-items: center;
+
+  @media (max-width: 370px) {
+    flex-wrap: wrap;
+  }
 }
 
 .header__logo {
