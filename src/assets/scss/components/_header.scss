@@ -30,6 +30,12 @@
     font-weight: var(--font-weight-bold);
     font-size: clamp(.88rem, calc(.4rem + 3.06vw), 2.5rem);
     line-height: 1.2;
+    padding-inline-end: calc(64px);
+
+    @media (min-width: $breakpoint) {
+      padding-inline-end: 0;
+      flex-direction: column;
+    }
   }
 }
 

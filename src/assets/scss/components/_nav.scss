@@ -2,14 +2,19 @@
 @use '../global/variables' as *;
 
 .nav {
-  margin: 1rem 0;
-  padding: 0;
+  margin: 0;
+  padding: 6rem var(--page-margin) var(--page-margin);
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   gap: .25em;
-  grid-auto-flow: column;
-  grid-auto-columns: 1fr;
   font-size: 110%;
+
+  @media (min-width: $breakpoint) {
+    margin: 1rem 0;
+    padding: 0;
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
 
   &__item {
     list-style-type: none;

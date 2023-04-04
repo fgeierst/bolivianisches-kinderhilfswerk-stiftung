@@ -13,7 +13,7 @@ export class ExpandingNav extends HTMLElement {
 		.clipbox {
 			z-index: 1;
 			position: fixed;
-			top: calc(var(--header-height, 0) + .8em + .7em);
+			top: 0;
 			left: 0;
 			right: 0;
 			bottom: 0;
@@ -32,12 +32,57 @@ export class ExpandingNav extends HTMLElement {
 		}
 
 		[aria-expanded="false"] + .clipbox > .clipbox__drawer {
-			transform: translateY(-100%);
+			transform: translateX(100%);
 		}
 
 		:focus-visible {
 			outline: 2px solid;
 			outline-offset: 2px;
+		}
+
+		button {
+			all: unset;
+			position: fixed;
+			right: 1rem;
+			top: 1rem;
+			background-color: var(--color-lightgrey, rgb(248 248 248));
+			width: 48px;
+			height: 48px;
+			z-index: 2;
+		}
+
+		button::before,
+		button::after {
+				content: "";
+				display: block;
+				width: 24px;
+				height: 3px;
+				position: absolute;
+				left: 12px;
+				background-color: var(--color-text);
+				transition: transform 0.2s;
+				}
+
+		button::before {
+				top: 18px;
+			}
+
+		button::after {
+				bottom: 18px;
+			}
+
+		[aria-expanded="true"]::before {
+			top: calc(50% - 3px / 2);
+			transform: rotate(-45deg);
+		}
+
+		[aria-expanded="true"]::after {
+			top: calc(50% - 3px / 2);
+			transform: rotate(45deg);
+		}
+
+		button:focus-visible {
+				outline-offset: -3px;
 		}
 	}
 	@media (min-width: ${this.breakpoint + 1}px) {
@@ -45,9 +90,18 @@ export class ExpandingNav extends HTMLElement {
 			display: none;
 		}
 	}
+	.visually-hidden {
+		position: absolute;
+		transform: scale(0);
+	}
 </style>
 
-<button aria-expanded="false"><slot name="button"></slot> </button>
+<button aria-expanded="false">
+	<span class="visually-hidden">
+		<slot name="button"></slot>
+	</span>
+</button>
+
 <div class="clipbox">
 	<div class="clipbox__drawer">
 		<slot></slot>
