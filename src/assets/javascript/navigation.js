@@ -116,18 +116,21 @@ export class ExpandingNav extends HTMLElement {
 		this.button.addEventListener("click", this.onButtonClick.bind(this));
 	}
 
-	connectedCallback() {
-		console.log("connected");
-	}
-
 	get breakpoint() {
     return parseInt(this.getAttribute('breakpoint') || 700, 10);
 	}
 
 	onButtonClick() {
-		console.log("clicked");
 		const isOpen = this.button.getAttribute("aria-expanded") === "true";
 		this.button.setAttribute("aria-expanded", !isOpen);
+	}
+
+	open() {
+		this.button.setAttribute("aria-expanded", "true");
+	}
+
+	close() {
+		this.button.setAttribute("aria-expanded", "false");
 	}
 }
 
