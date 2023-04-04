@@ -6,7 +6,7 @@ export class ExpandingNav extends HTMLElement {
 <style>
  @media (max-width: ${this.breakpoint}px) {
 		:host {
-			--transition-duration: .2s;
+			--transition-duration: .3s;
 			position: relative;
 		}
 
@@ -27,7 +27,7 @@ export class ExpandingNav extends HTMLElement {
 		}
 
 		.clipbox__drawer {
-			transition: transform var(--transition-duration) linear;
+			transition: transform var(--transition-duration) cubic-bezier(0.77, 0, 0.175, 1);
 			background-color: white;
 		}
 
