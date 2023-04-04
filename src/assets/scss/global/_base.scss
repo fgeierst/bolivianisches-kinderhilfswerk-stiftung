@@ -1,8 +1,7 @@
-/* ---------- body */
-
+// Body
 body {
   font-family: Nunito, system-ui, sans-serif;
-  font-size: clamp(1rem, .5rem + 1vw, 1.25rem);  /* responsive base font-size */
+  font-size: clamp(1rem, .5rem + 1vw, 1.25rem);
   line-height: 1.5;
   color: var(--color-text);
   background-color: var(--color-background);
@@ -13,13 +12,30 @@ body {
 }
 
 
-/* ------------ basic element styling -- */
-
+// Reset
 a {
   color: inherit;
 
   &:focus-visible {
     outline: 2px solid var(--color-text);
     outline-offset: 2px;
+  }
+}
+
+// Skip Link
+.skip-link {
+  background: var(--color-primary);
+  position: absolute;
+  top: .5em;
+  left: .5em;
+  padding: .5em;
+  transform: translateY(-600%);
+  font-family: var(--font-title);
+
+  &:focus-visible {
+    transform: translateY(0%);
+    outline: 2px solid var(--color-text);
+    outline-offset: -2px;
+    text-decoration: none;
   }
 }

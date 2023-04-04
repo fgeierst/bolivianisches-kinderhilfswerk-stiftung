@@ -1,19 +1,21 @@
 <header class="header">
+  <div class="header__brand">
+    <a href="/">
+      <img class="header__logo" src="/assets/icons/logo.svg" alt="Startseite" width="160" height="171">
+    </a>
 
-	<a href="#main" class="skip-link">Zum Inhalt springen</a>
+    {% if eleventyNavigation.key === "Stiftung" %}
+      <h1 class="header__title">
+        Gemeinschaftsstiftung Bolivianisches Kinderhilfswerk
+      </h1>
+    {% else %}
+      <div class="header__title">
+        Gemeinschaftsstiftung Bolivianisches Kinderhilfswerk
+      </div>
+    {% endif %}
+  </div>
 
-	<a href="/">
-		<img class="header__logo" src="/assets/icons/logo.svg" alt="Startseite" width="160" height="171">
-	</a>
-
-	{% if eleventyNavigation.key === "Stiftung" %}
-		<h1 class="header__title">
-			Gemeinschaftsstiftung Bolivianisches Kinderhilfswerk
-		</h1>
-	{% else %}
-		<div class="header__title">
-			Gemeinschaftsstiftung Bolivianisches Kinderhilfswerk
-		</div>
-	{% endif %}
-
+  <nav class="header__nav">
+    {% include 'nav.njk' %}
+  </nav>
 </header>

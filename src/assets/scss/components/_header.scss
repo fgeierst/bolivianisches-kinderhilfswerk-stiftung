@@ -1,33 +1,26 @@
-/* ------------ component: header -- */
+// Header
 
-.skip-link {
-  background: var(--color-primary);
-  position: absolute;
-  top: .5em;
-  left: .5em;
-  padding: .5em;
-  transform: translateY(-600%);
-  font-family: var(--font-title);
-
-  &:focus-visible {
-    transform: translateY(0%);
-    outline: 2px solid var(--color-text);
-    outline-offset: -2px;
-    text-decoration: none;
-  }
-}
+@use '../global/variables' as *;
 
 .header {
+  --header-height: clamp(2.5rem, calc(-.94rem + 22vw), 9.38rem);
+
   display: flex;
-  align-items: center;
   gap: .5rem;
 
-  @media (max-width: 370px) {
-    flex-wrap: wrap;
+  @media (min-width: $breakpoint) {
+    flex-direction: column;
+  }
+
+  &__brand {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
   }
 
   &__logo {
-    width: clamp(3rem, 3rem + 10vw, 10rem);
+    display: block;
+    width: clamp(2.5rem, calc(-.94rem + 22vw), 9.38rem);
     height: auto;
   }
 
@@ -35,12 +28,8 @@
     margin: 0;
     font-family: var(--font-title);
     font-weight: var(--font-weight-bold);
-    font-size: 2em;
+    font-size: clamp(.88rem, calc(.4rem + 3.06vw), 2.5rem);
     line-height: 1.2;
-
-    @media (max-width: 600px) {
-      font-size: 140%;
-    }
   }
 }
 

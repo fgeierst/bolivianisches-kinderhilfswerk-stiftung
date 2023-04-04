@@ -15,9 +15,10 @@ module.exports = function (eleventyConfig) {
   });
 
   eleventyConfig.addAsyncShortcode("image", imageShortcode);
-  
+
   eleventyConfig.setServerPassthroughCopyBehavior("copy");
   eleventyConfig.addPassthroughCopy('src/assets/scss');
+  eleventyConfig.addPassthroughCopy('src/assets/javascript');
 
   return {
     passthroughFileCopy: true,
