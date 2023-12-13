@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>WebC Example</title>
+    <style @raw="getBundle('css')" webc:keep></style>
+    <script @raw="getBundle('js')" webc:keep></script>
+  </head>
+  <body>
+    <h1>WebC *is* HTML.</h1>
+    <my-aside>Hello</my-aside>
+  </body>
+
+  <style>
+    h1 {
+      background-color: pink;
+    }
+  </style>
+</html>

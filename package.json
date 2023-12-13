@@ -22,5 +22,8 @@
   },
   "browserslist": [
     "> 1% in DE and not dead"
-  ]
+  ],
+  "dependencies": {
+    "@11ty/eleventy-plugin-webc": "^0.11.1"
+  }
 }
