@@ -9,18 +9,21 @@
     "build": "npx eleventy"
   },
   "devDependencies": {
-    "@11ty/eleventy": "2.0.1",
-    "@11ty/eleventy-img": "^3.1.8",
+    "@11ty/eleventy": "3.0.0-beta.1",
+    "@11ty/eleventy-img": "^4.0.2",
     "@11ty/eleventy-navigation": "^0.3.5",
     "@11ty/eleventy-plugin-vite": "^4.0.0",
     "path": "^0.12.7",
-    "sass": "^1.69.5",
-    "stylelint": "^16.0.2",
-    "stylelint-config-standard-scss": "^12.0.0",
+    "sass": "^1.78.0",
+    "stylelint": "^16.9.0",
+    "stylelint-config-standard-scss": "^13.1.0",
     "stylelint-group-selectors": "^1.0.10",
-    "stylelint-scss": "^6.0.0"
+    "stylelint-scss": "^6.5.1"
   },
   "browserslist": [
     "> 1% in DE and not dead"
-  ]
+  ],
+  "dependencies": {
+    "@11ty/eleventy-upgrade-help": "3"
+  }
 }

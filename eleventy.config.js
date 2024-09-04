@@ -3,47 +3,51 @@ const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
 const path = require("path");
 const Image = require("@11ty/eleventy-img");
 
+const UpgradeHelper = require("@11ty/eleventy-upgrade-help");
+
 module.exports = function (eleventyConfig) {
-  eleventyConfig.setTemplateFormats("njk,svg,woff2,md");
+	eleventyConfig.addPlugin(UpgradeHelper);
 
-  eleventyConfig.addPlugin(EleventyVitePlugin);
-  eleventyConfig.addPlugin(eleventyNavigationPlugin);
+	eleventyConfig.setTemplateFormats("njk,svg,woff2,md");
 
-  eleventyConfig.setFrontMatterParsingOptions({
-    excerpt: true,
-    excerpt_separator: "<!-- excerpt -->",
-  });
+	eleventyConfig.addPlugin(EleventyVitePlugin);
+	eleventyConfig.addPlugin(eleventyNavigationPlugin);
 
-  eleventyConfig.addAsyncShortcode("image", imageShortcode);
+	eleventyConfig.setFrontMatterParsingOptions({
+		excerpt: true,
+		excerpt_separator: "<!-- excerpt -->",
+	});
 
-  eleventyConfig.setServerPassthroughCopyBehavior("copy");
-  eleventyConfig.addPassthroughCopy('src/assets/scss');
-  eleventyConfig.addPassthroughCopy('src/assets/javascript');
+	eleventyConfig.addAsyncShortcode("image", imageShortcode);
 
-  return {
-    passthroughFileCopy: true,
-    dir: {
-      input: "src",
-      output: "site",
-    },
-  };
+	eleventyConfig.setServerPassthroughCopyBehavior("copy");
+	eleventyConfig.addPassthroughCopy("src/assets/scss");
+	eleventyConfig.addPassthroughCopy("src/assets/javascript");
+
+	return {
+		passthroughFileCopy: true,
+		dir: {
+			input: "src",
+			output: "site",
+		},
+	};
 };
 
 async function imageShortcode(src, alt, sizes = "90vw") {
-  let metadata = await Image(src, {
-    widths: [400, 800],
-    formats: ["webp"],
-    urlPath: "/assets/images/",
-    outputDir: "./site/assets/images/",
-  });
+	let metadata = await Image(src, {
+		widths: [400, 800],
+		formats: ["webp"],
+		urlPath: "/assets/images/",
+		outputDir: "./site/assets/images/",
+	});
 
-  let imageAttributes = {
-    alt,
-    sizes,
-    class: 'image',
-    loading: "lazy",
-    decoding: "async",
-  };
+	let imageAttributes = {
+		alt,
+		sizes,
+		class: "image",
+		loading: "lazy",
+		decoding: "async",
+	};
 
-  return Image.generateHTML(metadata, imageAttributes);
+	return Image.generateHTML(metadata, imageAttributes);
 }
