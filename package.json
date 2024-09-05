@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.html",
   "author": "Florian Geierstanger",
+  "type": "module",
   "scripts": {
     "dev": "npx eleventy --serve  --incremental",
     "build": "npx eleventy"
@@ -12,7 +13,7 @@
     "@11ty/eleventy": "3.0.0-beta.1",
     "@11ty/eleventy-img": "^4.0.2",
     "@11ty/eleventy-navigation": "^0.3.5",
-    "@11ty/eleventy-plugin-vite": "^4.0.0",
+    "@11ty/eleventy-plugin-vite": "5.0.0-alpha.4",
     "path": "^0.12.7",
     "sass": "^1.78.0",
     "stylelint": "^16.9.0",
@@ -22,8 +23,5 @@
   },
   "browserslist": [
     "> 1% in DE and not dead"
-  ],
-  "dependencies": {
-    "@11ty/eleventy-upgrade-help": "3"
-  }
+  ]
 }

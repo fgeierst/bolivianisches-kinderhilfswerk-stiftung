@@ -1,13 +1,8 @@
-const EleventyVitePlugin = require("@11ty/eleventy-plugin-vite");
-const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
-const path = require("path");
-const Image = require("@11ty/eleventy-img");
+import EleventyVitePlugin from "@11ty/eleventy-plugin-vite";
+import eleventyNavigationPlugin from "@11ty/eleventy-navigation";
+import Image from "@11ty/eleventy-img";
 
-const UpgradeHelper = require("@11ty/eleventy-upgrade-help");
-
-module.exports = function (eleventyConfig) {
-	eleventyConfig.addPlugin(UpgradeHelper);
-
+export default async function (eleventyConfig) {
 	eleventyConfig.setTemplateFormats("njk,svg,woff2,md");
 
 	eleventyConfig.addPlugin(EleventyVitePlugin);
@@ -31,7 +26,7 @@ module.exports = function (eleventyConfig) {
 			output: "site",
 		},
 	};
-};
+}
 
 async function imageShortcode(src, alt, sizes = "90vw") {
 	let metadata = await Image(src, {
